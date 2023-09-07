@@ -1,0 +1,207 @@
+//_variables.scss
+
+// 文字大小設定
+$font-size-base: 1rem; // 16px
+
+$font-size-sm: $font-size-base * 0.875; // 14px
+$h1-font-size: $font-size-base * 4; // 64px
+$h2-font-size: $font-size-base * 3; // 48px
+$h3-font-size: $font-size-base * 1.75; // 28px
+$h4-font-size: $font-size-base * 1.5; // 24px
+$h5-font-size: $font-size-base * 1.25; // 20px
+$h6-font-size: $font-size-base; // 16px
+$primary: #aa0601;
+
+$bg-primary: #aa0601;
+$bg-light: #fbf2f2;
+$primary-dark: #650300;
+$gray: #707070;
+
+
+//間隔
+
+
+.bg-primary {
+    background-color: $bg-primary;
+}
+
+.bg-light {
+    background-color: $bg-light;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.d-block {
+    display: block;
+}
+
+.align-item-start {
+    align-items: start;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+.text-c {
+    text-align: center;
+}
+
+.text-dark {
+    color: $primary;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.p-4 {
+    padding: 16px;
+}
+
+.px-4 {
+    padding: 0 16px;
+}
+
+.pt-12 {
+    padding-top: 48px;
+}
+
+.ptb-8 {
+    padding: 32px 0;
+}
+
+.ptb-6 {
+    padding: 24px 0;
+}
+
+.ptb-20 {
+    padding: 80px 0;
+}
+
+.my-20 {
+    margin: 80px 0;
+}
+
+.mb-1 {
+    margin-bottom: 4px;
+}
+
+.mb-2 {
+    margin-bottom: 8px;
+}
+
+.mb-4 {
+    margin-bottom: 16px;
+}
+
+.mb-6 {
+    margin-bottom: 24px;
+}
+
+.mb-8 {
+    margin-bottom: 32px;
+}
+
+.mb-12 {
+    margin-bottom: 48px;
+}
+
+.mr-1 {
+    margin-right: 4px;
+}
+
+.mr-2 {
+    margin-right: 8px;
+}
+
+.mr-4 {
+    margin-right: 16px;
+}
+
+.mr-6 {
+    margin-right: 24px;
+}
+
+.mr-8 {
+    margin-right: 32px;
+}
+
+.mr-12 {
+    margin-right: 48px;
+}
+
+
+
+@mixin pad {
+    @media(max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width: 375px) {
+        @content;
+    }
+}
+
+.container {
+    /* 12*86+11*24=1296px*/
+    /* 1296 + 12 + 12 = 1320 (增加左右留白padding 12px)，
+    這樣子 container 內層能容納的最大寬度才會是 1296px */
+    /*有使用borderbox故要將 左右padding 12px加回*/
+    max-width: 1320px;
+    margin: 0 auto;
+    /* 左右 padding */
+    padding: 0 12px;
+
+    @include pad {
+        max-width: 720px;
+
+    }
+
+    @include mobile {
+        max-width: 372px;
+
+    }
+}
+
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.333%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-8 {
+    width: 66.666%;
+}
+
+@include pad {
+    .col-md-10 {
+        width: 83.333%;
+    }
+}
+
+@include mobile {
+    .col-sm-12 {
+        width: 100%;
+    }
+}

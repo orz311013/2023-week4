@@ -1,0 +1,385 @@
+.banner-bg {
+    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true');
+    background-size: cover;
+    background-position: center center;
+
+    @include pad {
+        background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true');
+    }
+
+    .banner {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 768px;
+
+        @include mobile {
+            height: auto;
+            /*取代 斷點900px以上設定的 350px高度，不然下方的最小高度500px會無效*/
+            min-height: 396px;
+        }
+    }
+
+    .banner-solgan {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    h2 {
+        font-size: 36px;
+        color: #650300;
+
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+    .bannerContent {
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 10px;
+
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+
+    .bannerBtn {
+        border: none;
+        font-size: 20px;
+        padding: 6px 12px;
+
+        a {
+            color: white;
+        }
+    }
+}
+
+.solgan {
+    background-color: #fbf2f2;
+
+    img {
+        height: 83px;
+        width: 83px;
+    }
+
+    .solganTitle {
+        font-size: $h2-font-size;
+        color: $primary;
+        font-weight: bold;
+
+        @include mobile {
+            font-size: $h4-font-size;
+        }
+    }
+
+    .soldganList {
+        @include pad {
+            flex-wrap: wrap;
+            gap: 24px
+        }
+
+        li {
+            @include pad {
+                width: 47%;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+
+    h3 {
+        font-size: $h4-font-size;
+        color: $primary;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+}
+
+
+.ad1 {
+    ul {
+        gap: 24px;
+    }
+
+    h2 {
+        font-size: 48px;
+        color: $primary;
+        font-weight: bold;
+
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+
+    p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 48px;
+        color: $primary;
+        margin-top: 8px;
+    }
+
+    .ad1-list {
+
+        @include pad {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .ad1-item {
+        @include pad {
+            width: 100%;
+        }
+    }
+
+    .container {
+        @include pad {
+            width: 46.66%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.ad2 {
+    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    height: 608px;
+
+    @include pad {
+        background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-md.png?raw=true');
+        min-height: 960px;
+    }
+
+    @include mobile {
+        background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true');
+        min-height: 820px;
+    }
+
+    h2 {
+        font-size: 48px;
+        color: white;
+        font-weight: bold;
+
+        @include mobile {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+    }
+
+    p {
+        font-size: 48px;
+        color: #aa0601;
+        background-color: white;
+    }
+
+    .ad2-list {
+        @include pad {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .ad2-item {
+            @include pad {
+                width: 100%;
+                margin-bottom: 32px;
+            }
+
+            @include mobile {
+                margin-bottom: 24px;
+            }
+        }
+
+        .ad2-img1 {
+            @include mobile {
+                content: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1-sm.png?raw=true');
+            }
+        }
+
+        .ad2-img2 {
+            @include mobile {
+                content: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2-sm.png?raw=true');
+            }
+        }
+
+        .ad2-img2 .title {
+            font-size: 48px;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+.customer {
+    ul {
+        gap: 24px;
+
+        @include pad {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+
+    h2 {
+        font-size: 48px;
+        color: $primary;
+        font-weight: bold;
+    }
+
+    li {
+        display: flex;
+        width: 25%;
+        box-shadow: 0 2px 6px #00000029;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+
+        @include pad {
+            width: 48%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    h4,
+    p {
+        font-size: 16px;
+    }
+
+    .date {
+        font-size: $font-size-sm;
+        color: $gray
+    }
+}
+
+
+
+.recommend-block {
+    height: 205px;
+}
+
+
+.contact {
+    padding: 80px 0;
+}
+
+.contact h2 {
+    font-weight: bold;
+    font-size: $h2-font-size;
+
+    @include mobile {
+        font-size: 24px;
+    }
+}
+
+.contact-content {
+    font-size: 20px;
+}
+
+.input-style {
+    width: 100%;
+    border: 1px solid #000000;
+    background-color: transparent;
+    /*背景透明*/
+    padding: 6px 12px;
+}
+
+.feedback {
+    resize: none;
+    /*預設值，瀏覽者不能調整大小*/
+    min-height: 136px;
+}
+
+.form-checkbox {
+    width: 20px;
+    height: 20px;
+    background: #000;
+    accent-color: #aa0601;
+    /*勾選後顏色*/
+}
+
+.form-btn {
+    display: block;
+    color: white;
+    max-width: 416px;
+    text-align: center;
+    padding: 16px;
+}
+
+.form-btn:hover {
+    background-color: $primary;
+}
+
+.contact {
+    padding: 80px 0;
+
+    h2 {
+        font-weight: bold;
+        font-size: 48px;
+
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+
+    .contact-content {
+        font-size: 20px;
+    }
+
+    .input-style {
+        width: 100%;
+        border: 1px solid #000000;
+        background-color: transparent;
+        /*背景透明*/
+        padding: 6px 12px;
+    }
+
+    .feedback {
+        resize: none;
+        /*預設值，瀏覽者不能調整大小*/
+        min-height: 136px;
+    }
+}
+
+
+
+.form-checkbox {
+    width: 20px;
+    height: 20px;
+    background: #000;
+    accent-color: $primary;
+    /*勾選後顏色*/
+}
+
+.form-btn {
+    display: block;
+    color: white;
+    max-width: 416px;
+    text-align: center;
+    padding: 16px;
+}
+
+.form-btn:hover {
+    color: $primary
+}

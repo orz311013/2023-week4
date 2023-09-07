@@ -1,0 +1,62 @@
+/* header */
+
+.navbar {
+  padding: 16px 0;
+
+  @include pad {
+    padding-bottom: 0;
+  }
+
+  .navbar-logo {
+    width: 80px;
+
+    @include pad {
+      margin: 0 0 16px 16px;
+    }
+  }
+
+  .navbar-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @include pad {
+      flex-direction: column;
+      max-width: 100%;
+    }
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    margin: 0 12px;
+
+    @include pad {
+      flex-wrap: wrap;
+      margin: 0 -12px;
+    }
+  }
+
+  .navbar-item {
+    height: 100%;
+
+    @include pad {
+      width: 50%;
+      margin-right: 0px;
+      border: 1px solid #ffffff;
+    }
+  }
+
+  .navbar-link {
+    height: 100%;
+    display: block;
+    font-size: 20px;
+    color: white;
+    padding: 8px 0 8px 32px;
+
+    @include pad {
+      font-size: 16px;
+      text-align: center;
+      padding: 12px 0;
+    }
+  }
+}
